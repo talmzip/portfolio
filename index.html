@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tal Manuel Zipori - Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --text: #111827;
+      --muted: #6b7280;
+      --bg: #fafafa;
+      --card-radius: 12px;
+      --container: 1000px;
+      --accent: #3b82f6;
+      --border: #e5e7eb;
+      --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+      --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    header {
+      text-align: center;
+      padding: 64px 20px 48px;
+      max-width: var(--container);
+      margin: 0 auto;
+    }
+
+    .emoji {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 24px;
+      display: block;
+      border: 3px solid white;
+      box-shadow: var(--shadow);
+    }
+
+    header h1 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      margin: 0 0 16px 0;
+      letter-spacing: -0.025em;
+    }
+
+    header p {
+      margin: 8px 0;
+      color: var(--muted);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.7;
+    }
+
+    a { 
+      color: var(--accent); 
+      text-decoration: none; 
+      transition: color 0.2s ease;
+    }
+    
+    a:hover {
+      color: #1d4ed8;
+    }
+
+    .about-link {
+      font-size: 1rem;
+      margin-top: 24px;
+      font-weight: 500;
+    }
+
+    .inquiries {
+      margin-top: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    
+    .email-pill {
+      border: 1px solid var(--border);
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 8px 16px;
+      color: var(--text);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      box-shadow: var(--shadow);
+    }
+    
+    .email-pill:hover {
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--accent);
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px 40px;
+      padding: 20px 20px 60px;
+      max-width: var(--container);
+      margin: 0 auto;
+    }
+
+    @media (max-width: 840px) {
+      main { grid-template-columns: 1fr; }
+    }
+
+    .project { 
+      display: grid; 
+      gap: 12px;
+      transition: transform 0.2s ease;
+    }
+    
+    .project:hover {
+      transform: translateY(-2px);
+    }
+
+    .project-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      padding: 0 4px;
+    }
+    
+    .project-title {
+      margin: 0;
+      font-size: 1.1rem;
+      color: var(--text);
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+    
+    .project-arrow { 
+      color: var(--muted); 
+      font-size: 1rem;
+      transition: color 0.2s ease;
+    }
+    
+    .project:hover .project-arrow {
+      color: var(--accent);
+    }
+
+    .media {
+      width: 100%;
+      aspect-ratio: 16/9;
+      border-radius: var(--card-radius);
+      overflow: hidden;
+      background: #f3f4f6;
+      box-shadow: var(--shadow);
+      transition: box-shadow 0.2s ease;
+    }
+    
+    .project:hover .media {
+      box-shadow: var(--shadow-hover);
+    }
+    .media > video, .media > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .project-info {
+      padding: 16px 0;
+      display: grid;
+      gap: 8px;
+    }
+
+    .client-name {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text);
+      margin: 0;
+      letter-spacing: -0.01em;
+    }
+
+    .project-description {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.5;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img class="emoji" src="images/hand.jpg" alt="Profile picture" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" />
+    <h1>Tal Manuel Zipori</h1>
+    <p>XR Developer & Designer with 12+ years of hands-on experience building end-to-end products that feel simple, intuitive, and human.</p>
+    <p>Former Studio Director, TAUXR. Former Co-founder & CEO, Clone.</p>
+    <p class="about-link"><a href="#about">About me →</a></p>
+    <div class="inquiries">
+      <span>Inquiries:</span>
+      <a class="email-pill" href="mailto:tal.zipori@gmail.com">tal.zipori@gmail.com</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="project">
+      <div class="project-header">
+        <h3 class="project-title">Hemoglobin Class</h3>
+        <span class="project-arrow">↗</span>
+      </div>
+      <div class="media">
+        <video src="videos/hemoglobin.mp4" muted loop playsinline></video>
+      </div>
+      <div class="project-info">
+        <h4 class="client-name">Client Name</h4>
+        <p class="project-description">Short description about the project goes here. This should explain what the project is about and its key features.</p>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <h3 class="project-title">Clone - Next-Gen Remote Communication</h3>
+        <span class="project-arrow">↗</span>
+      </div>
+      <div class="media">
+        <video src="videos/clone.mp4" muted loop playsinline></video>
+      </div>
+      <div class="project-info">
+        <h4 class="client-name">Client Name</h4>
+        <p class="project-description">Short description about the project goes here. This should explain what the project is about and its key features.</p>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <h3 class="project-title">A Personal Fear Signature</h3>
+        <span class="project-arrow">↗</span>
+      </div>
+      <div class="media">
+        <video src="videos/cover_fear.jpg" muted loop playsinline></video>
+      </div>
+      <div class="project-info">
+        <h4 class="client-name">Client Name</h4>
+        <p class="project-description">Short description about the project goes here. This should explain what the project is about and its key features.</p>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <h3 class="project-title">Awwwe</h3>
+        <span class="project-arrow">↗</span>
+      </div>
+      <div class="media">
+        <video src="videos/awww.mp4" muted loop playsinline></video>
+      </div>
+      <div class="project-info">
+        <h4 class="client-name">Client Name</h4>
+        <p class="project-description">Short description about the project goes here. This should explain what the project is about and its key features.</p>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <h3 class="project-title">XR In Science, An Experience</h3>
+        <span class="project-arrow">↗</span>
+      </div>
+      <div class="media">
+        <video src="videos/demo.mp4" muted loop playsinline></video>
+      </div>
+      <div class="project-info">
+        <h4 class="client-name">Client Name</h4>
+        <p class="project-description">Short description about the project goes here. This should explain what the project is about and its key features.</p>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <h3 class="project-title">Origins of Printing</h3>
+        <span class="project-arrow">↗</span>
+      </div>
+      <div class="media">
+        <video src="videos/printing.mp4" muted loop playsinline></video>
+      </div>
+      <div class="project-info">
+        <h4 class="client-name">Client Name</h4>
+        <p class="project-description">Short description about the project goes here. This should explain what the project is about and its key features.</p>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    document.querySelectorAll('.project video').forEach(video => {
+      // Set the first frame as poster by seeking to 0 and pausing
+      video.addEventListener('loadedmetadata', () => {
+        video.currentTime = 0;
+        video.pause();
+      });
+      
+      video.addEventListener('mouseenter', () => video.play());
+      video.addEventListener('mouseleave', () => {
+        video.pause();
+        video.currentTime = 0;
+      });
+    });
+  </script>
+</body>
+</html>
