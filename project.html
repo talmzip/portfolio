@@ -3,17 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Project Title - Tal Manuel Zipori</title>
+  <title>Hemoglobin Class - Tal Manuel Zipori</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --text: #1f2937;
-      --muted: #141516;
-      --bg: #f6f7fb;
-      --card-radius: 8px;
-      --container: 980px;
+      --text: #000000;
+      --muted: #6b7280;
+      --bg: #ffffff;
+      --container: 800px;
     }
 
     * { box-sizing: border-box; }
@@ -31,21 +30,15 @@
       top: 24px;
       left: 24px;
       z-index: 100;
-      background: white;
-      border: 1px solid #e5e7eb;
-      border-radius: 8px;
-      padding: 8px 16px;
       color: var(--text);
       text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      transition: all 0.2s ease;
+      font-size: 1rem;
+      font-weight: 400;
+      transition: opacity 0.2s ease;
     }
 
     .back-link:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      opacity: 0.7;
     }
 
     .container {
@@ -62,61 +55,45 @@
     .project-title {
       font-size: 2.5rem;
       font-weight: 700;
-      margin: 0 0 16px 0;
+      margin: 0 0 40px 0;
       letter-spacing: -0.02em;
     }
 
-    .project-subtitle {
+    .project-description {
       font-size: 1.1rem;
-      color: var(--muted);
-      margin: 0 0 24px 0;
+      color: var(--text);
+      margin: 0 0 40px 0;
       max-width: 600px;
       margin-left: auto;
       margin-right: auto;
+      text-align: center;
     }
 
-    .project-meta {
-      display: flex;
-      justify-content: center;
-      gap: 24px;
-      font-size: 0.9rem;
-      color: var(--muted);
+    .main-image {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      margin: 0 auto 40px auto;
+      border-radius: 8px;
+      display: block;
     }
 
-    .meta-item {
-      display: flex;
-      align-items: center;
-      gap: 6px;
+    .main-image img,
+    .main-image video {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
     }
 
-    .content-section {
+    .two-column-media {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
       margin-bottom: 60px;
     }
 
-    .section-title {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin: 0 0 24px 0;
-      letter-spacing: -0.01em;
-    }
-
-    .section-text {
-      font-size: 1rem;
-      line-height: 1.7;
-      margin: 0 0 24px 0;
-      max-width: 700px;
-    }
-
-    .media-container {
-      margin: 32px 0;
-    }
-
     .media-item {
-      margin-bottom: 24px;
-      border-radius: var(--card-radius);
-      overflow: hidden;
-      background: white;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 0;
     }
 
     .media-item img,
@@ -124,129 +101,148 @@
       width: 100%;
       height: auto;
       display: block;
+      border-radius: 8px;
     }
 
     .media-caption {
-      padding: 16px 20px;
+      margin-top: 12px;
       font-size: 0.9rem;
       color: var(--muted);
-      border-top: 1px solid #f3f4f6;
+      text-align: center;
     }
 
-    .two-column {
+    .text-section {
+      margin-bottom: 60px;
+      max-width: 600px;   
+    }
+
+    .text-section p {
+      font-size: 1rem;
+      line-height: 1.7;
+      margin: 0 0 24px 0;
+    }
+
+    .text-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .highlight {
+      text-decoration: underline;
+    }
+
+    .two-column-images {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 40px;
+      margin-bottom: 60px;
       align-items: start;
     }
 
-    .two-column .section-text {
-      margin-bottom: 0;
+    .small-image {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 8px;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .wish-list {
+      margin-top: 40px;
+    }
+
+    .wish-list h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 0 0 20px 0;
+    }
+
+    .wish-list ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .wish-list li {
+      margin-bottom: 12px;
+      line-height: 1.6;
     }
 
     @media (max-width: 768px) {
       .container { padding: 60px 16px 32px; }
       .project-title { font-size: 2rem; }
-      .two-column { grid-template-columns: 1fr; gap: 24px; }
+      .two-column-media, .two-column-images { 
+        grid-template-columns: 1fr; 
+        gap: 24px; 
+      }
       .back-link { top: 16px; left: 16px; }
     }
   </style>
 </head>
 <body>
-  <a href="index.html" class="back-link">← Back to Portfolio</a>
+  <a href="index.html" class="back-link">Back</a>
   
   <div class="container">
     <header class="project-header">
-      <h1 class="project-title">Project Title</h1>
-      <p class="project-subtitle">A brief description of the project and what it accomplishes</p>
-      <div class="project-meta">
-        <div class="meta-item">
-          <span>Client:</span>
-          <strong>Client Name</strong>
+      <h1 class="project-title">Hemoglobin Class</h1>
+      
+      <div class="main-image">
+        <video src="videos/hemoglobin.mp4" muted loop playsinline autoplay></video>
+      </div>
+      
+      <p class="project-description">A VR biology lesson designed to help students understand the structure and function of hemoglobin through face-to-face encounter. Designed for VR first-timers with fun and intuitive interactions & guidance. Deployed on +500 students.</p>
+    </header>
+    
+    <div class="two-column-media">
+      <div class="media-item">
+        <video src="videos/hemoglobin.mp4" controls muted loop playsinline></video>
+        <div class="media-caption">The tutorial - starting from the very beginning.</div>
+      </div>
+      <div class="media-item">
+        <img src="images/cover_demo.jpg" alt="Prof David Shprinruk, me, and students in a pilot">
+        <div class="media-caption">Prof David Shprinruk, me, and students in a pilot.</div>
+      </div>
+    </div>
+    <main>
+      <div class="text-section">
+        <p>Designed to be operated on 10 VR first-timers simultaneously, by a single operator.</p>
+        <p>I knew it had to be 100% self-guided, with intuitive and inviting interactions.</p>
+      </div>
+
+
+      <div class="main-image">
+        <img src="images/cover_hemoglobin.jpg" alt="VR Scene 2 - Hand interacting with hemoglobin model">
+      </div>
+
+      <div class="text-section">
+        <p>Students described it as a learning environment that invites <span class="highlight">"aha"</span> moments.</p>
+        <p>I discovered the power of learning by seeing familiar ideas from a <span class="highlight">new perspective</span>.</p>
+      </div>
+
+      <div class="two-column-images">
+        <div class="media-item">
+          <img src="images/cover_clone.jpg" alt="Selection-Question Interface" class="small-image">
+          <div class="media-caption">Selection-Question Interface.</div>
         </div>
-        <div class="meta-item">
-          <span>Year:</span>
-          <strong>2024</strong>
-        </div>
-        <div class="meta-item">
-          <span>Role:</span>
-          <strong>Lead Designer</strong>
+        <div class="media-item">
+          <img src="images/cover_fear.jpg" alt="Pointing-Question Interface" class="small-image">
+          <div class="media-caption">Pointing-Question Interface.</div>
         </div>
       </div>
-    </header>
 
-    <main>
-      <section class="content-section">
-        <h2 class="section-title">Overview</h2>
-        <p class="section-text">
-          This is the main overview section where you can describe the project in detail. 
-          Explain the problem it solves, the approach taken, and the key outcomes achieved.
-        </p>
-        <div class="media-container">
-          <div class="media-item">
-            <img src="images/project-hero.jpg" alt="Project hero image">
-            <div class="media-caption">Main project visualization or key screenshot</div>
-          </div>
-        </div>
-      </section>
+      <div class="text-section">
+        <p>I wasn't sure VR was the right medium, so we built quick, simple prototypes to test its value.</p>
+        <p>One placed hemoglobin models in a virtual room, and the immediate excitement from lecturers and students proved its impact.</p>
+      </div>
 
-      <section class="content-section">
-        <h2 class="section-title">Process & Approach</h2>
-        <div class="two-column">
-          <div>
-            <p class="section-text">
-              Describe your design process, research methods, and how you approached 
-              solving the problem. This could include user research, ideation, 
-              prototyping, and testing phases.
-            </p>
-          </div>
-          <div>
-            <p class="section-text">
-              Continue with more details about the technical implementation, 
-              challenges faced, and how you overcame them. This helps showcase 
-              your problem-solving skills.
-            </p>
-          </div>
-        </div>
-        <div class="media-container">
-          <div class="media-item">
-            <video src="videos/process-demo.mp4" controls muted></video>
-            <div class="media-caption">Process demonstration or workflow video</div>
-          </div>
-        </div>
-      </section>
-
-      <section class="content-section">
-        <h2 class="section-title">Key Features</h2>
-        <p class="section-text">
-          Highlight the main features and innovations of your project. Explain what 
-          makes it unique and how it provides value to users.
-        </p>
-        <div class="media-container">
-          <div class="media-item">
-            <img src="images/feature-1.jpg" alt="Feature 1">
-            <div class="media-caption">Feature 1 description</div>
-          </div>
-          <div class="media-item">
-            <img src="images/feature-2.jpg" alt="Feature 2">
-            <div class="media-caption">Feature 2 description</div>
-          </div>
-        </div>
-      </section>
-
-      <section class="content-section">
-        <h2 class="section-title">Results & Impact</h2>
-        <p class="section-text">
-          Share the outcomes and impact of your project. Include metrics, user feedback, 
-          or any other evidence of success. This demonstrates the value you delivered.
-        </p>
-        <div class="media-container">
-          <div class="media-item">
-            <img src="images/results-chart.jpg" alt="Results visualization">
-            <div class="media-caption">Results data or user feedback visualization</div>
-          </div>
-        </div>
-      </section>
+      <div class="wish-list">
+        <h3>I wish I had more time for</h3>
+        <ul>
+          <li>Huge mode: Hide UI, enlarge hemoglobin to building size, explore in solitude.</li>
+          <li>Responsive UI: Adapts to hemoglobin scale.</li>
+          <li>Toolbox: Magnifying glass and painting brush for new question types.</li>
+          <li>Custom layouts: Unique text design per question.</li>
+        </ul>
+      </div>
     </main>
   </div>
 </body>
