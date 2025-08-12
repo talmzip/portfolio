@@ -182,7 +182,7 @@
         <span class="project-arrow">↗</span>
       </div>
       <div class="media">
-        <video src="videos/hemoglobin.mp4" muted loop playsinline></video>
+        <video src="videos/hemoglobin.mp4" muted loop playsinline autoplay></video>
       </div>
       <div class="project-info">
         <h4 class="client-name">Tel Aviv University</h4>
@@ -196,7 +196,7 @@
         <span class="project-arrow">↗</span>
       </div>
       <div class="media">
-        <video src="videos/clone.mp4" muted loop playsinline></video>
+        <video src="videos/clone.mp4" muted loop playsinline autoplay></video>
       </div>
       <div class="project-info">
         <h4 class="client-name">Client Name</h4>
@@ -210,7 +210,7 @@
         <span class="project-arrow">↗</span>
       </div>
       <div class="media">
-        <video src="videos/fear.mp4" muted loop playsinline></video>
+        <video src="videos/fear.mp4" muted loop playsinline autoplay></video>
       </div>
       <div class="project-info">
         <h4 class="client-name">Client Name</h4>
@@ -224,7 +224,7 @@
         <span class="project-arrow">↗</span>
       </div>
       <div class="media">
-        <video src="videos/awwwe.mp4" muted loop playsinline></video>
+        <video src="videos/awwwe.mp4" muted loop playsinline autoplay></video>
       </div>
       <div class="project-info">
         <h4 class="client-name">Client Name</h4>
@@ -238,7 +238,7 @@
         <span class="project-arrow">↗</span>
       </div>
       <div class="media">
-        <video src="videos/demo.mp4" muted loop playsinline></video>
+        <video src="videos/demo.mp4" muted loop playsinline autoplay></video>
       </div>
       <div class="project-info">
         <h4 class="client-name">Client Name</h4>
@@ -252,7 +252,7 @@
         <span class="project-arrow">↗</span>
       </div>
       <div class="media">
-        <video src="videos/printing.mp4" muted loop playsinline></video>
+        <video src="videos/printing.mp4" muted loop playsinline autoplay></video>
       </div>
       <div class="project-info">
         <h4 class="client-name">Client Name</h4>
@@ -262,18 +262,28 @@
   </main>
 
   <script>
+    // Detect if device is mobile
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
+    
     document.querySelectorAll('.project video').forEach(video => {
-      // Set the first frame as poster by seeking to 0 and pausing
-      video.addEventListener('loadedmetadata', () => {
-        video.currentTime = 0;
-        video.pause();
-      });
-      
-      video.addEventListener('mouseenter', () => video.play());
-      video.addEventListener('mouseleave', () => {
-        video.pause();
-        video.currentTime = 0;
-      });
+      if (isMobile) {
+        // On mobile: autoplay and loop continuously
+        video.addEventListener('loadedmetadata', () => {
+          video.play().catch(e => console.log('Autoplay prevented:', e));
+        });
+      } else {
+        // On desktop: pause initially, play on hover
+        video.addEventListener('loadedmetadata', () => {
+          video.currentTime = 0;
+          video.pause();
+        });
+        
+        video.addEventListener('mouseenter', () => video.play());
+        video.addEventListener('mouseleave', () => {
+          video.pause();
+          video.currentTime = 0;
+        });
+      }
     });
 
     // Handle project clicks
