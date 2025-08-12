@@ -11,9 +11,9 @@
     :root {
       --text: #1f2937;
       --muted: #141516;
-      --bg: #f6f7fb;
+      --bg: hsl(0, 0%, 100%);
       --card-radius: 8px;
-      --container: 980px;
+      --container: 1050px;
     }
 
     * { box-sizing: border-box; }
@@ -27,7 +27,7 @@
 
     header {
       text-align: center;
-      padding: 48px 20px 28px;
+      padding: 48px 20px 50px;    /* padding from headers to projects */
       max-width: var(--container);
       margin: 0 auto;
     }
@@ -46,15 +46,15 @@
     header h1 {
       font-size: 1.5rem;
       font-weight: 700;
-      margin: 0 0 8px 0;
+      margin: 35px 0 35px 0;
       letter-spacing: -0.01em;
     }
 
     header p {
       margin: 4px 0;
       color: var(--muted);
-      font-size: 0.95rem;
-      max-width: 480px;
+      font-size: 1rem;
+      max-width: 600px;
       margin-left: auto;
       margin-right: auto;
       line-height: 1.5;
@@ -64,7 +64,8 @@
 
     .about-link {
       font-size: 0.9rem;
-      margin-top: 8px;
+      margin-top: 10px;
+      margin-bottom: 35px;
       max-width: 480px;
       margin-left: auto;
       margin-right: auto;
@@ -94,7 +95,7 @@
     main {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 28px 28px;
+      gap: 28px 70px;
       padding: 10px 20px 40px;
       max-width: var(--container);
       margin: 0 auto;
@@ -104,8 +105,12 @@
       main { grid-template-columns: 1fr; }
     }
 
-    .project { display: grid; gap: 8px; }
-
+    .project { 
+      display: grid; 
+      gap: 8px; 
+      cursor: pointer;
+    }
+    
     .project-header {
       display: flex;
       align-items: baseline;
@@ -159,9 +164,11 @@
   <header>
     <img class="emoji" src="images/hand.jpg" alt="Profile picture" />
     <h1>Tal Manuel Zipori</h1>
-    <p>XR Developer & Designer with 12+ years of hands-on experience building end-to-end products that feel simple, intuitive, and human.</p>
-    <p>Former Studio Director, TAUXR. Former Co-founder & CEO, Clone.</p>
-    <p class="about-link"><a href="#about">About me →</a></p>
+    <p>XR Developer & Designer with 12+ years of hands-on experience</p>
+    <p>building end-to-end products that feel simple, intuitive, and human.</p>
+    <br>
+    <p>Former Studio Director @ TAUXR Studio. Former Co-founder & CEO @ Clone.</p>
+    <p class="about-link"><a href="#about">About me ↗</a></p>
     <div class="inquiries">
       <span>Inquiries:</span>
       <a class="email-pill" href="mailto:tal.zipori@gmail.com">tal.zipori@gmail.com</a>
@@ -169,7 +176,7 @@
   </header>
 
   <main>
-    <div class="project">
+    <div class="project" data-project="hemoglobin">
       <div class="project-header">
         <h3 class="project-title">Hemoglobin Class</h3>
         <span class="project-arrow">↗</span>
@@ -183,7 +190,7 @@
       </div>
     </div>
 
-    <div class="project">
+    <div class="project" data-project="clone">
       <div class="project-header">
         <h3 class="project-title">Clone - Next-Gen Remote Communication</h3>
         <span class="project-arrow">↗</span>
@@ -197,13 +204,13 @@
       </div>
     </div>
 
-    <div class="project">
+    <div class="project" data-project="fear">
       <div class="project-header">
         <h3 class="project-title">A Personal Fear Signature</h3>
         <span class="project-arrow">↗</span>
       </div>
       <div class="media">
-        <video src="videos/cover_fear.jpg" muted loop playsinline></video>
+        <video src="videos/fear.mp4" muted loop playsinline></video>
       </div>
       <div class="project-info">
         <h4 class="client-name">Client Name</h4>
@@ -211,13 +218,13 @@
       </div>
     </div>
 
-    <div class="project">
+    <div class="project" data-project="awww">
       <div class="project-header">
         <h3 class="project-title">Awwwe</h3>
         <span class="project-arrow">↗</span>
       </div>
       <div class="media">
-        <video src="videos/awww.mp4" muted loop playsinline></video>
+        <video src="videos/awwwe.mp4" muted loop playsinline></video>
       </div>
       <div class="project-info">
         <h4 class="client-name">Client Name</h4>
@@ -225,7 +232,7 @@
       </div>
     </div>
 
-    <div class="project">
+    <div class="project" data-project="xr-science">
       <div class="project-header">
         <h3 class="project-title">XR In Science, An Experience</h3>
         <span class="project-arrow">↗</span>
@@ -239,7 +246,7 @@
       </div>
     </div>
 
-    <div class="project">
+    <div class="project" data-project="printing">
       <div class="project-header">
         <h3 class="project-title">Origins of Printing</h3>
         <span class="project-arrow">↗</span>
@@ -266,6 +273,14 @@
       video.addEventListener('mouseleave', () => {
         video.pause();
         video.currentTime = 0;
+      });
+    });
+
+    // Handle project clicks
+    document.querySelectorAll('.project').forEach(project => {
+      project.addEventListener('click', () => {
+        const projectId = project.getAttribute('data-project');
+        window.location.href = `project.html?project=${projectId}`;
       });
     });
   </script>
