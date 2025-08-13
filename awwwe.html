@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Awwwe - Tal Manuel Zipori</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --text: #000000;
+      --muted: #6b7280;
+      --bg: #ffffff;
+      --container: 1100px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .back-link {
+      position: absolute;
+      top: 24px;
+      left: 24px;
+      z-index: 100;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 400;
+      transition: opacity 0.2s ease;
+    }
+
+    .back-link:hover {
+      opacity: 0.7;
+    }
+
+    .container {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 80px 20px 40px;
+      position: relative;
+    }
+
+    .project-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .project-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin: 0 0 40px 0;
+      letter-spacing: -0.02em;
+    }
+
+    .project-description {
+      font-size: 1.8rem;
+      color: var(--text);
+      margin: 0 0 40px 0;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.8;
+    }
+
+    .main-image {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      margin: 0 auto 40px auto;
+      border-radius: 1px;
+      display: block;
+    }
+
+    .main-image img,
+    .main-image video {
+      width: 100%;
+      height: auto;
+    }
+
+    .two-column-media {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin: 0 auto 60px auto;
+      width: 100%;
+      max-width: 800px;
+    }
+
+    .media-item {
+      margin-bottom: 0;
+    }
+
+    .media-item img,
+    .media-item video {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+      object-fit: contain;
+      min-width: 0;
+    }
+
+    .media-caption {
+      margin-top: 2px;
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: left;
+      margin-left: 0;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .text-section {
+      margin-bottom: 60px;
+      max-width: 800px;   
+    }
+
+    .text-section p {
+      font-size: 1.4rem;
+      line-height: 1.7;
+      margin: 0 0 24px 0;
+    }
+
+    .text-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .highlight {
+      text-decoration: underline;
+    }
+
+    .two-column-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin: 0 auto 60px auto;
+      align-items: start;
+      width: 100%;
+      max-width: 800px;
+    }
+
+    .small-image {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 8px;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .wish-list {
+      margin-top: 40px;
+    }
+
+    .wish-list h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 0 0 20px 0;
+    }
+
+    .wish-list ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .wish-list li {
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+
+    .main-image .media-caption {
+      margin-top: 4px;
+      margin-bottom: 0;
+    }
+
+    .project-meta {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      font-size: 1.3rem;
+      color: var(--text);
+      font-family:  Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      line-height: 1.6;
+      font-weight: 100;
+    }
+
+    .client {
+      font-weight: normal;
+    }
+
+    .project-type {
+      font-weight: normal;
+    }
+
+    @media (max-width: 768px) {
+      .container { 
+        padding: 100px 16px 32px; 
+        position: relative;
+      }
+      .project-title { font-size: 2rem; }
+      .project-description { font-size: 1.4rem; }
+      .two-column-media, .two-column-images { 
+        grid-template-columns: 1fr; 
+        gap: 24px; 
+      }
+      .back-link { 
+        top: 16px; 
+        left: 16px; 
+        position: absolute;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html" class="back-link">Back</a>
+  
+  <div class="container">
+    <header class="project-header">
+      <h1 class="project-title">Awwwe</h1>
+      
+      <div class="main-image">
+        <video src="awwwe/awwwe_trailer.MP4" controls loop playsinline></video>
+        <div class="media-caption">Teaser - Sound ON</div>
+      </div>
+      
+      <p class="project-description">An audio-visual VR journey through surreal environments composed of collaged 3D scans. Blends tailor made spatial audio and creative movement mechanics to invite slow exploration and reflection.</p>
+      
+      <div class="project-meta">
+        <span class="client">Client: Personal Project</span>
+        <span class="project-type">#Gaming #Art</span>
+      </div>
+    </header>
+    
+    <main>
+      <div class="main-image">
+        <video src="awwwe/awwwe_budhha.mp4" muted loop playsinline onmouseenter="this.play()" onmouseleave="this.pause(); this.currentTime = 0;"></video>
+      </div>
+    
+      
+      <div class="text-section">
+        <p>Awwwe is my way to examine ideas I find interesting in VR:</p>
+        <p>how to make movement feel like going for a walk on a 2x2m area?<br>
+        how to incorporate hand tracking and room boundaries as active game mechanics?<br>
+        how to use different body postures as a story-telling vehicle?</p>
+      </div>
+
+      <div class="main-image">
+        <video src="awwwe/awwwe_rocks.mp4" muted loop playsinline onmouseenter="this.play()" onmouseleave="this.pause(); this.currentTime = 0;"></video>
+      </div>
+      <div class="text-section">
+        <p>We research how sound can guide and adapt to player movement, developing methods to keep it smooth and continuous as actions, behaviors, or locations change.</p>
+      </div>
+      
+      <div class="main-image">
+        <video src="awwwe/awwwe_handtojoker.mp4" muted loop playsinline onmouseenter="this.play()" onmouseleave="this.pause(); this.currentTime = 0;"></video>
+      </div>
+      
+   <div class="text-section">
+        <p>Designed for Meta Store and museum exhibition: two versions of the experience—an hour-long home-friendly edition, and a 15-minute version with extra touches for a dedicated physical space.</p>
+      </div>
+
+    </main>
+  </div>
+</body>
+</html>
