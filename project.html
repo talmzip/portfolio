@@ -26,7 +26,7 @@
     }
 
     .back-link {
-      position: fixed;
+      position: absolute;
       top: 24px;
       left: 24px;
       z-index: 100;
@@ -45,6 +45,7 @@
       max-width: var(--container);
       margin: 0 auto;
       padding: 80px 20px 40px;
+      position: relative;
     }
 
     .project-header {
@@ -184,15 +185,42 @@
       margin-bottom: 0;  /* Remove any bottom margin */
     }
 
+    .project-meta {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      font-size: 1.3rem;
+      color: var(--text);
+      font-family:  Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      line-height: 1.6;
+      font-weight: 100;
+    }
+
+    .client {
+      font-weight: normal;
+    }
+
+    .project-type {
+      font-weight: normal;
+    }
+
     @media (max-width: 768px) {
-      .container { padding: 80px 16px 32px; }
+      .container { 
+        padding: 100px 16px 32px; 
+        position: relative;
+      }
       .project-title { font-size: 2rem; }
       .project-description { font-size: 1.4rem; }
       .two-column-media, .two-column-images { 
         grid-template-columns: 1fr; 
         gap: 24px; 
       }
-      .back-link { top: 16px; left: 16px; }
+      .back-link { 
+        top: 16px; 
+        left: 16px; 
+        position: absolute;
+      }
     }
   </style>
 </head>
@@ -210,6 +238,11 @@
       </div>
       
       <p class="project-description">Students explore hemoglobin up close through fun & intuitive interactions.<br>Designed for <u>one operator to run with 10 first-time users at once</u>.<br> Deployed on 1000+ students.</p>
+      
+      <div class="project-meta">
+        <span class="client">Client: Faculty of Life Sciences, Tel Aviv University</span>
+        <span class="project-type">#Education #Science</span>
+      </div>
     </header>
     
     <div class="two-column-media">
