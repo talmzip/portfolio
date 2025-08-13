@@ -290,7 +290,16 @@
     document.querySelectorAll('.project').forEach(project => {
       project.addEventListener('click', () => {
         const projectId = project.getAttribute('data-project');
-        window.location.href = `project.html?project=${projectId}`;
+        
+        // Route to specific project pages
+        if (projectId === 'xr-science') {
+          window.location.href = 'xr-science.html';
+        } else if (projectId === 'hemoglobin') {
+          window.location.href = 'project.html';
+        } else {
+          // Default fallback for other projects
+          window.location.href = `project.html?project=${projectId}`;
+        }
       });
     });
   </script>

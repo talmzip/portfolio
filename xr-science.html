@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>XR In Science - Tal Manuel Zipori</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --text: #000000;
+      --muted: #6b7280;
+      --bg: #ffffff;
+      --container: 1100px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .back-link {
+      position: fixed;
+      top: 24px;
+      left: 24px;
+      z-index: 100;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 400;
+      transition: opacity 0.2s ease;
+    }
+
+    .back-link:hover {
+      opacity: 0.7;
+    }
+
+    .container {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 80px 20px 40px;
+    }
+
+    .project-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .project-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin: 0 0 40px 0;
+      letter-spacing: -0.02em;
+    }
+
+    .project-description {
+      font-size: 1.8rem;
+      color: var(--text);
+      margin: 0 0 40px 0;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.8;
+    }
+
+    .main-image {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      margin: 0 auto 40px auto;
+      border-radius: 1px;
+      display: block;
+    }
+
+    .main-image img,
+    .main-image video {
+      width: 100%;
+      height: auto;
+    }
+
+    .two-column-media {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin: 0 auto 60px auto;
+      width: 100%;
+      max-width: 800px;
+    }
+
+    .media-item {
+      margin-bottom: 0;
+    }
+
+    .media-item img,
+    .media-item video {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+      object-fit: contain;
+      min-width: 0;
+    }
+
+    .media-caption {
+      margin-top: 2px;
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: left;
+      margin-left: 0;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .text-section {
+      margin-bottom: 60px;
+      max-width: 800px;   
+    }
+
+    .text-section p {
+      font-size: 1.4rem;
+      line-height: 1.7;
+      margin: 0 0 24px 0;
+    }
+
+    .text-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .highlight {
+      text-decoration: underline;
+    }
+
+    .two-column-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin: 0 auto 60px auto;
+      align-items: start;
+      width: 100%;
+      max-width: 800px;
+    }
+
+    .small-image {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 8px;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .wish-list {
+      margin-top: 40px;
+    }
+
+    .wish-list h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 0 0 20px 0;
+    }
+
+    .wish-list ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .wish-list li {
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+
+    .main-image .media-caption {
+      margin-top: 4px;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+      .container { padding: 80px 16px 32px; }
+      .project-title { font-size: 2rem; }
+      .project-description { font-size: 1.4rem; }
+      .two-column-media, .two-column-images { 
+        grid-template-columns: 1fr; 
+        gap: 24px; 
+      }
+      .back-link { top: 16px; left: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html" class="back-link">Back</a>
+  
+  <div class="container">
+    <header class="project-header">
+      <h1 class="project-title">XR In Science, An Experience</h1>
+      
+      <div class="main-image">
+        <video src="txr-demo//demo_showreel.mp4" controls loop playsinline muted></video>
+      </div>
+      
+      <p class="project-description">Explaining the power of XR in science through direct, first-hand experience with the ideas of behavioral data tracking and embodiment.</p>
+    </header>
+    
+    <main>
+      <div class="text-section">
+        <p>Seven mini experiences that turn abstract ideas into tangible, emotional encounters. A few examples:</p>
+      </div>
+
+      
+      <div class="main-image">
+          <video src="txr-demo/demo_eyetracking.mp4" muted loop playsinline autoplay></video>
+          <div class="media-caption">The eye-tracking museum</div>
+        </div>
+        
+        <div class="text-section">
+            <p>In a virtual museum, after a few minutes of exploration, a real-time heat map of users’ gaze appeared on the walls, floor, and ceiling, revealing the precision and intrusiveness of eye tracking.</p>
+        </div>
+        
+        <div class="main-image">
+            <video src="txr-demo/demo_movement_fast.mp4" muted loop playsinline autoplay></video>
+            <div class="media-caption">The movement-tracking maze</div>
+        </div>
+        <div class="text-section">
+          <p>After navigating a maze to find a hidden coin, users returned to a miniature version of it, seeing a tiny avatar retracing their exact path and body language.</p>
+        </div>
+        
+        <div class="two-column-media">
+            <div class="media-item">
+                <video src="txr-demo/demo_level-load.mp4" muted loop playsinline autoplay></video>
+                <div class="media-caption">Selected a level from the menu</div>
+            </div>
+            <div class="media-item">
+                <video src="txr-demo/demo_calibration.mp4" muted loop playsinline autoplay></video>
+                <div class="media-caption">Calibrating the physical to the virtual</div>
+            </div>
+        </div>
+        
+              <div class="text-section">
+                <p>We recreated the physical room in VR to ease new users into the experience and reduce disorientation. I call it “Fake Passthrough”.</p>
+              </div>
+    </main>
+</div>
+</body>
+</html>
