@@ -108,7 +108,7 @@
     .project { 
       display: grid; 
       gap: 8px; 
-      cursor: pointer;
+      cursor: default;
     }
     
     .project-header {
@@ -123,7 +123,11 @@
       color: var(--muted);
       font-weight: 500;
     }
-    .project-arrow { color: #9ca3af; font-size: 0.9rem; }
+    .project-arrow { 
+      color: #9ca3af; 
+      font-size: 0.9rem; 
+      cursor: pointer;
+    }
 
     .media {
       width: 100%;
@@ -131,6 +135,7 @@
       border-radius: var(--card-radius);
       overflow: hidden;
       background: #e5e7eb;
+      cursor: pointer;
     }
     .media > video, .media > img {
       width: 100%;
@@ -141,15 +146,20 @@
 
     .project-info {
       padding: 12px 0;
-      display: grid;
-      gap: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 20px;
+      cursor: default;
     }
 
     .client-name {
       font-size: 0.9rem;
-      font-weight: 20;
-      color: var(--text);
+      color: var(--muted);
+      line-height: 1.4;
       margin: 0;
+      text-align: left;
+      flex: 1;
     }
 
     .project-description {
@@ -157,6 +167,8 @@
       color: var(--muted);
       line-height: 1.4;
       margin: 0;
+      text-align: right;
+      flex-shrink: 0;
     }
   </style>
 </head>
@@ -182,6 +194,10 @@
       <div class="media">
         <video src="videos/hemoglobin.mp4" muted loop playsinline autoplay></video>
       </div>
+      <div class="project-info">
+        <p class="client-name">Faculty of Life Sciences, Tel Aviv University</p>
+        <p class="project-description">Education | UX</p>
+      </div>
     </div>
 
     <div class="project" data-project="clone">
@@ -191,6 +207,10 @@
       </div>
       <div class="media">
         <video src="videos/clone.mp4" muted loop playsinline autoplay></video>
+      </div>
+      <div class="project-info">
+        <p class="client-name">Co-Founder & CEO</p>
+        <p class="project-description">Technology | Product</p>
       </div>
     </div>
 
@@ -202,6 +222,10 @@
       <div class="media">
         <video src="videos/fear.mp4" muted loop playsinline autoplay></video>
       </div>
+      <div class="project-info">
+        <p class="client-name">Ramot Lab, Weizmann Institute of Science</p>
+        <p class="project-description">Science</p>
+      </div>
     </div>
 
     <div class="project" data-project="awww">
@@ -211,6 +235,10 @@
       </div>
       <div class="media">
         <video src="videos/awwwe.mp4" muted loop playsinline autoplay></video>
+      </div>
+      <div class="project-info">
+        <p class="client-name">Personal Project</p>
+        <p class="project-description">Gaming | Art</p>
       </div>
     </div>
 
@@ -222,6 +250,10 @@
       <div class="media">
         <video src="videos/demo.mp4" muted loop playsinline autoplay></video>
       </div>
+      <div class="project-info">
+        <p class="client-name">TAUXR Studio, Tel Aviv University</p>
+        <p class="project-description">Science</p>
+      </div>
     </div>
 
     <div class="project" data-project="stickout">
@@ -231,6 +263,10 @@
       </div>
       <div class="media">
         <video src="videos/stickout.mp4" muted loop playsinline></video>
+      </div>
+      <div class="project-info">
+        <p class="client-name">Personal Project</p>
+        <p class="project-description">Gaming | UX</p>
       </div>
     </div>
 
@@ -242,6 +278,10 @@
       <div class="media">
         <video src="videos/printing.mp4" muted loop playsinline autoplay></video>
       </div>
+      <div class="project-info">
+        <p class="client-name">Sourasky Library, Tel Aviv University</p>
+        <p class="project-description">Education</p>
+      </div>
     </div>
 
     <div class="project" data-project="grabbing">
@@ -251,6 +291,10 @@
       </div>
       <div class="media">
         <video src="videos/grabbing.mp4" muted loop playsinline></video>
+      </div>
+      <div class="project-info">
+        <p class="client-name">Personal Project</p>
+        <p class="project-description">UX</p>
       </div>
     </div>
 
@@ -262,6 +306,10 @@
       <div class="media">
         <video src="videos/marker-map-short.mp4" muted loop playsinline></video>
       </div>
+      <div class="project-info">
+        <p class="client-name">Ramot Lab, Weizmann Institute of Science</p>
+        <p class="project-description">UX</p>
+      </div>
     </div>
 
     <div class="project" data-project="neuroanatomy-class">
@@ -271,6 +319,10 @@
       </div>
       <div class="media">
         <video src="videos/brain.mp4" muted loop playsinline></video>
+      </div>
+      <div class="project-info">
+        <p class="client-name">Brain Bank, Tel Aviv University</p>
+        <p class="project-description">Education | UX</p>
       </div>
     </div>
 
@@ -283,6 +335,10 @@
       <div class="media">
         <video src="videos/furniture.mp4" muted loop playsinline></video>
       </div>
+      <div class="project-info">
+        <p class="client-name">Personal Project</p>
+        <p class="project-description">UX | Product</p>
+      </div>
     </div>
     
     <div class="project" data-project="future-videos">
@@ -293,6 +349,10 @@
       <div class="media">
         <video src="videos/videos.mp4" muted loop playsinline></video>
       </div>
+      <div class="project-info">
+        <p class="client-name">Personal Project</p>
+        <p class="project-description">Experimental</p>
+      </div>
     </div>
 
     <div class="project" data-project="hammer-length">
@@ -302,6 +362,10 @@
       </div>
       <div class="media">
         <video src="videos/hammer.mp4" muted loop playsinline></video>
+      </div>
+      <div class="project-info">
+        <p class="client-name">Personal Project</p>
+        <p class="project-description">Gaming | UX</p>
       </div>
     </div>
 
@@ -335,42 +399,56 @@
 
     // Handle project clicks
     document.querySelectorAll('.project').forEach(project => {
-      project.addEventListener('click', () => {
+      const media = project.querySelector('.media');
+      const arrow = project.querySelector('.project-arrow');
+      
+      // Handle media clicks
+      media.addEventListener('click', () => {
         const projectId = project.getAttribute('data-project');
-        
-        // Route to specific project pages
-        if (projectId === 'xr-science') {
-          window.location.href = 'p_xr-science.html';
-        } else if (projectId === 'hemoglobin') {
-          window.location.href = 'p_hemoglobin.html';
-        } else if (projectId === 'fear') {
-          window.location.href = 'p_fear.html';
-        } else if (projectId === 'printing') {
-          window.location.href = 'p_printing.html';
-        } else if (projectId === 'future-videos') {
-          window.location.href = 'p_future-videos.html';
-        } else if (projectId === 'awww') {
-          window.location.href = 'p_awwwe.html';
-        } else if (projectId === 'clone') {
-          window.location.href = 'p_clone.html';
-        } else if (projectId === 'marker-map-interface') {
-          window.location.href = 'p_marker-map.html';
-        } else if (projectId === 'neuroanatomy-class') {
-          window.location.href = 'p_brain.html';
-        } else if (projectId === 'stickout') {
-          window.location.href = 'p_stickout.html';
-        } else if (projectId === 'grabbing') {
-          window.location.href = 'p_grabbing.html';
-        } else if(projectId === 'furniture') {
-          window.location.href = 'p_furniture.html';
-        } else if(projectId === 'hammer-length') {
-          window.location.href = 'p_hammer.html';
-        } else {
-          // Default fallback for other projects
-          window.location.href = `project.html?project=${projectId}`;
-        }
+        navigateToProject(projectId);
+      });
+      
+      // Handle arrow clicks
+      arrow.addEventListener('click', () => {
+        const projectId = project.getAttribute('data-project');
+        navigateToProject(projectId);
       });
     });
+
+    // Function to navigate to project pages
+    function navigateToProject(projectId) {
+      // Route to specific project pages
+      if (projectId === 'xr-science') {
+        window.location.href = 'p_xr-science.html';
+      } else if (projectId === 'hemoglobin') {
+        window.location.href = 'p_hemoglobin.html';
+      } else if (projectId === 'fear') {
+        window.location.href = 'p_fear.html';
+      } else if (projectId === 'printing') {
+        window.location.href = 'p_printing.html';
+      } else if (projectId === 'future-videos') {
+        window.location.href = 'p_future-videos.html';
+      } else if (projectId === 'awww') {
+        window.location.href = 'p_awwwe.html';
+      } else if (projectId === 'clone') {
+        window.location.href = 'p_clone.html';
+      } else if (projectId === 'marker-map-interface') {
+        window.location.href = 'p_marker-map.html';
+      } else if (projectId === 'neuroanatomy-class') {
+        window.location.href = 'p_brain.html';
+      } else if (projectId === 'stickout') {
+        window.location.href = 'p_stickout.html';
+      } else if (projectId === 'grabbing') {
+        window.location.href = 'p_grabbing.html';
+      } else if(projectId === 'furniture') {
+        window.location.href = 'p_furniture.html';
+      } else if(projectId === 'hammer-length') {
+        window.location.href = 'p_hammer.html';
+      } else {
+        // Default fallback for other projects
+        window.location.href = `project.html?project=${projectId}`;
+      }
+    }
   </script>
 </body>
 </html>
