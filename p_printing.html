@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>XR In Science - Tal Manuel Zipori</title>
+  <title>Origins of Printing - Tal Manuel Zipori</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -222,6 +222,41 @@
         position: absolute;
       }
     }
+
+    .back-section {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .back-button {
+      font-size: 0.9rem;
+      margin-top: 10px;
+      margin-bottom: 35px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .inquiries {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .email-pill {
+      border: 1px solid #e5e7eb;
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 6px 10px;
+      color: #374151;
+      font-size: 0.85rem;
+    }
   </style>
 </head>
 <body>
@@ -229,58 +264,69 @@
   
   <div class="container">
     <header class="project-header">
-      <h1 class="project-title">XR In Science, An Experience</h1>
+      <h1 class="project-title">Origins of Printing</h1>
       
       <div class="main-image">
-        <video src="txr-demo//demo_showreel.mp4" controls loop playsinline muted></video>
+        <video src="printing/printing_playthrough.mp4" controls loop playsinline></video>
+        <div class="media-caption">Playthrough</div>
+
       </div>
       
-      <p class="project-description">Explaining the power of XR in science through direct, first-hand experience with the ideas of behavioral data tracking and embodiment.</p>
+      <p class="project-description">Teaching the Gutenberg’s printing process through a fun & historically accurate short experience.</p>
       
       <div class="project-meta">
-        <span class="client">Client: TAUXR Studio, Tel Aviv University</span>
-        <span class="project-type">Science</span>
+        <span class="client">Client: Sourasky Library, Tel Aviv University</span>
+        <span class="project-type">Education</span>
       </div>
     </header>
     
     <main>
       <div class="text-section">
-        <p>Seven mini experiences that turn abstract ideas into tangible, emotional encounters. A few examples:</p>
+        <p>Transporting history students to the early 1600s, allowing them to experience, not just learn about, the hands-on challenges of a craft that shaped modern knowledge.</p>
+      </div>
+
+      <div class="main-image">
+        <video src="printing/printing_original.mp4" muted loop playsinline autoplay></video>
+        <div class="media-caption">The original typesetting process. </div>
+      </div> 
+
+      <div class="text-section">
+        <p>I collaborated with a book-history researcher to map the entire historical printing process. We divided it into three stand-alone modules, each with its own mechanics and flow:</p>
+        <p>1. Type carving and molding</p>
+        <p>2. Compositing (setting letters)</p>
+        <p>3. Inking and using the printing press</p>
+        <p>Due to strict budget constraints, we chose to focus on compositing.</p>
+
       </div>
 
       
       <div class="main-image">
-          <video src="txr-demo/demo_eyetracking.mp4" muted loop playsinline autoplay></video>
-          <div class="media-caption">The eye-tracking museum</div>
-        </div>
-        
-        <div class="text-section">
-            <p>In a virtual museum, after a few minutes of exploration, a real-time heat map of users’ gaze appeared on the walls, floor, and ceiling, revealing the precision and intrusiveness of eye tracking.</p>
-        </div>
-        
-        <div class="main-image">
-            <video src="txr-demo/demo_movement_fast.mp4" muted loop playsinline autoplay></video>
-            <div class="media-caption">The movement-tracking maze</div>
-        </div>
-        <div class="text-section">
-          <p>After navigating a maze to find a hidden coin, users returned to a miniature version of it, seeing a tiny avatar retracing their exact path and body language.</p>
-        </div>
-        
-        <div class="two-column-media">
-            <div class="media-item">
-                <video src="txr-demo/demo_level-load.mp4" muted loop playsinline autoplay></video>
-                <div class="media-caption">Selected a level from the menu</div>
-            </div>
-            <div class="media-item">
-                <video src="txr-demo/demo_calibration.mp4" muted loop playsinline autoplay></video>
-                <div class="media-caption">Calibrating the physical to the virtual</div>
-            </div>
-        </div>
-        
-              <div class="text-section">
-                <p>We recreated the physical room in VR to ease new users into the experience and reduce disorientation. I call it “Fake Passthrough”.</p>
-              </div>
+        <video src="printing/printing_compositing.mp4" muted loop playsinline autoplay></video>
+        <div class="media-caption">Compositing. </div>
+      </div> 
+      
+      <div class="text-section">
+        <p>We made adjustments, designed simple interactions, and created an experience that strives to replicate history accurately while remaining fun and satisfying.</p>
+      </div>
+      
+      <div class="wish-list">
+        <h3>I wish I had more time to</h3>
+        <ul>
+          <li>A proper tutorial</li>
+          <li>Organic letter rearrangement</li>
+          <li>A performance summary showing how long a user might take to print a full book</li>
+        </ul>
+      </div>
     </main>
-</div>
+
+    <div class="back-section">
+      <a href="index.html" class="back-button">← Back to Portfolio</a>
+    </div>
+
+    <div class="inquiries">
+      <span>Inquiries:</span>
+      <a class="email-pill" href="mailto:tal.zipori@gmail.com">tal.zipori@gmail.com</a>
+    </div>
+  </div>
 </body>
 </html>

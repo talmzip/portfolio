@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Awwwe - Tal Manuel Zipori</title>
+  <title>Hemoglobin Class - Tal Manuel Zipori</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -67,7 +67,7 @@
       max-width: 1100px;
       margin-left: auto;
       margin-right: auto;
-      line-height: 1.8;
+      line-height: 1.8;  /* ← Increase line height for more spacing */
     }
 
     .main-image {
@@ -181,8 +181,8 @@
     }
 
     .main-image .media-caption {
-      margin-top: 4px;
-      margin-bottom: 0;
+      margin-top: 4px;  /* Control spacing between video and caption */
+      margin-bottom: 0;  /* Remove any bottom margin */
     }
 
     .project-meta {
@@ -222,6 +222,41 @@
         position: absolute;
       }
     }
+
+    .back-section {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .back-button {
+      font-size: 0.9rem;
+      margin-top: 10px;
+      margin-bottom: 35px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .inquiries {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .email-pill {
+      border: 1px solid #e5e7eb;
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 6px 10px;
+      color: #374151;
+      font-size: 0.85rem;
+    }
   </style>
 </head>
 <body>
@@ -229,50 +264,78 @@
   
   <div class="container">
     <header class="project-header">
-      <h1 class="project-title">Awwwe</h1>
+      <h1 class="project-title">Hemoglobin Class</h1>
       
       <div class="main-image">
-        <video src="awwwe/awwwe_trailer.MP4" controls loop playsinline></video>
-        <div class="media-caption">Teaser - Sound ON</div>
+        <video src="hemoglobin/hemo_showreel.mp4" controls loop playsinline></video>
+        <div class="media-caption">Playthrough</div>
+
       </div>
       
-      <p class="project-description">An audio-visual VR journey through surreal environments composed of collaged 3D scans. Blends tailor made spatial audio and creative movement mechanics to invite slow exploration and reflection.</p>
+      <p class="project-description">Students explore hemoglobin up close through fun & intuitive interactions.<br>Designed for <u>one operator to run with 10 first-time users at once</u>.<br> Deployed on 1000+ students.</p>
       
       <div class="project-meta">
-        <span class="client">Personal Project</span>
-        <span class="project-type">Gaming | Art</span>
+        <span class="client">Client: Faculty of Life Sciences, Tel Aviv University</span>
+        <span class="project-type">Education | Science</span>
       </div>
     </header>
     
+    <div class="two-column-media">
+      <div class="media-item">
+        <video src="hemoglobin/hemo_tutorial.mp4" muted loop playsinline autoplay ondblclick="this.requestFullscreen(); this.muted = false; this.controls = true;" onmouseenter="this.controls = true;" onmouseleave="this.controls = false;"></video>
+        <div class="media-caption">The tutorial - starting from the very beginning.</div>
+      </div>
+      <div class="media-item">
+        <img src="hemoglobin/hemo_operations.jpg" alt="Prof David Shprinzak, me, and students in a pilot">
+        <div class="media-caption">Prof David Shprinzak, me, and students in a pilot.</div>
+      </div>
+    </div>
     <main>
-      <div class="main-image">
-        <video src="awwwe/awwwe_budhha.mp4" muted loop playsinline onmouseenter="this.play()" onmouseleave="this.pause(); this.currentTime = 0;"></video>
-      </div>
-    
-      
       <div class="text-section">
-        <p>Awwwe is my way to examine ideas I find interesting in VR:</p>
-        <p>how to make movement feel like going for a walk on a 2x2m area?<br>
-        how to incorporate hand tracking and room boundaries as active game mechanics?<br>
-        how to use different body postures as a story-telling vehicle?</p>
+        <p>A tutorial starting with the basics of headset comfort. Every interaction is carefully tested to ensure it’s intuitive and clearly presented.</p>
       </div>
 
-      <div class="main-image">
-        <video src="awwwe/awwwe_rocks.mp4" muted loop playsinline onmouseenter="this.play()" onmouseleave="this.pause(); this.currentTime = 0;"></video>
+      <div class="two-column-media">
+        <div class="media-item">
+          <video src="hemoglobin/hemo_pointingQ.mp4" muted loop playsinline autoplay></video>
+          <div class="media-caption">A pointing question.</div>
+        </div>
+        <div class="media-item">
+          <video src="hemoglobin/hemo_selectionQ.mp4" muted loop playsinline autoplay></video>
+          <div class="media-caption">A selection question..</div>
+        </div>
       </div>
+
       <div class="text-section">
-        <p>We research how sound can guide and adapt to player movement, developing methods to keep it smooth and continuous as actions, behaviors, or locations change.</p>
+        <p>Students described it as a learning environment <u>that sparks "aha" moments</u>. I discovered that exploring <u>familiar ideas</u> from <u>new perspectives</u> is a powerful way VR can enhance learning.</p>
       </div>
-      
+
+
       <div class="main-image">
-        <video src="awwwe/awwwe_handtojoker.mp4" muted loop playsinline onmouseenter="this.play()" onmouseleave="this.pause(); this.currentTime = 0;"></video>
-      </div>
+        <video src="hemoglobin/hemo_manipulator.mp4" muted loop playsinline autoplay></video>
+          <div class="media-caption">Scale, rotate, and... flick.</div>
+        </div>
 
-   <div class="text-section">
-        <p>Designed for Meta Store and museum exhibition: two versions of the experience—an hour-long home-friendly edition, and a 15-minute version with extra touches for a dedicated physical space.</p>
+      <div class="wish-list">
+        <h3>I wish I had more time for</h3>
+        <ul>
+          <li>Huge mode: Hide UI, enlarge hemoglobin to building size, explore in solitude.</li>
+          <li>Responsive UI: Adapts to hemoglobin scale.</li>
+          <li>Toolbox: Magnifying glass and painting brush for new question types.</li>
+          <li>Custom layouts: Unique text design per question.</li>
+        </ul>
       </div>
-
     </main>
+
+    <div class="back-section">
+      <a href="index.html" class="back-button">← Back to Portfolio</a>
+    </div>
+
+    <div class="inquiries">
+      <span>Inquiries:</span>
+      <a class="email-pill" href="mailto:tal.zipori@gmail.com">tal.zipori@gmail.com</a>
+    </div>
   </div>
 </body>
 </html>
+

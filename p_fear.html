@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hemoglobin Class - Tal Manuel Zipori</title>
+  <title>A Personal Fear Signature - Tal Manuel Zipori</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -67,7 +67,7 @@
       max-width: 1100px;
       margin-left: auto;
       margin-right: auto;
-      line-height: 1.8;  /* ← Increase line height for more spacing */
+      line-height: 1.8;
     }
 
     .main-image {
@@ -181,8 +181,8 @@
     }
 
     .main-image .media-caption {
-      margin-top: 4px;  /* Control spacing between video and caption */
-      margin-bottom: 0;  /* Remove any bottom margin */
+      margin-top: 4px;
+      margin-bottom: 0;
     }
 
     .project-meta {
@@ -222,6 +222,41 @@
         position: absolute;
       }
     }
+
+    .back-section {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .back-button {
+      font-size: 0.9rem;
+      margin-top: 10px;
+      margin-bottom: 35px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .inquiries {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .email-pill {
+      border: 1px solid #e5e7eb;
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 6px 10px;
+      color: #374151;
+      font-size: 0.85rem;
+    }
   </style>
 </head>
 <body>
@@ -229,71 +264,77 @@
   
   <div class="container">
     <header class="project-header">
-      <h1 class="project-title">Hemoglobin Class</h1>
+      <h1 class="project-title">A Personal Fear Signature</h1>
       
       <div class="main-image">
-        <video src="hemoglobin/hemo_showreel.mp4" controls loop playsinline></video>
-        <div class="media-caption">Playthrough</div>
-
+        <video src="videos/fear.mp4" controls loop playsinline></video>
+        <div class="media-caption">Showreel</div>
       </div>
       
-      <p class="project-description">Students explore hemoglobin up close through fun & intuitive interactions.<br>Designed for <u>one operator to run with 10 first-time users at once</u>.<br> Deployed on 1000+ students.</p>
+      <p class="project-description">Five mini-experiences, each introduces a unique fear trigger—a two-years study with dozens of participants, designed to examine the way fear manifests in each of us.</p>
       
       <div class="project-meta">
-        <span class="client">Client: Faculty of Life Sciences, Tel Aviv University</span>
-        <span class="project-type">#Education #Science</span>
+        <span class="client">Client: Ramot Lab, Weizmann Institute of Science</span>
+        <span class="project-type">Science</span>
       </div>
     </header>
     
-    <div class="two-column-media">
-      <div class="media-item">
-        <video src="hemoglobin/hemo_tutorial.mp4" muted loop playsinline autoplay ondblclick="this.requestFullscreen(); this.muted = false; this.controls = true;" onmouseenter="this.controls = true;" onmouseleave="this.controls = false;"></video>
-        <div class="media-caption">The tutorial - starting from the very beginning.</div>
-      </div>
-      <div class="media-item">
-        <img src="hemoglobin/hemo_operations.jpg" alt="Prof David Shprinzak, me, and students in a pilot">
-        <div class="media-caption">Prof David Shprinzak, me, and students in a pilot.</div>
-      </div>
-    </div>
     <main>
       <div class="text-section">
-        <p>A tutorial starting with the basics of headset comfort.</p>
-        <p>Every interaction is carefully tested to ensure it’s intuitive and clearly presented.</p>
+        <p>We were requested to trigger sustained fear responses without jump scares, allowing scientists to analyze emotional and physiological reactions in a controlled, immersive setting.</p>
       </div>
-
-      <div class="two-column-media">
-        <div class="media-item">
-          <video src="hemoglobin/hemo_pointingQ.mp4" muted loop playsinline autoplay></video>
-          <div class="media-caption">A pointing question.</div>
-        </div>
-        <div class="media-item">
-          <video src="hemoglobin/hemo_selectionQ.mp4" muted loop playsinline autoplay></video>
-          <div class="media-caption">A selection question..</div>
-        </div>
-      </div>
-
-      <div class="text-section">
-        <p>Students described it as a learning environment <u>that sparks "aha" moments</u>.</p>
-        <p>I discovered that exploring <u>familiar ideas</u> from <u>new perspectives</u> is a powerful way VR can enhance learning.</p>
-      </div>
-
 
       <div class="main-image">
-        <video src="hemoglobin/hemo_manipulator.mp4" muted loop playsinline autoplay></video>
-          <div class="media-caption">Scale, rotate, and... flick.</div>
-        </div>
+        <video src="fear/fear_spiders.mp4" muted loop playsinline onmouseenter="this.play()" onmouseleave="this.pause(); this.currentTime = 0;"></video>
+        <div class="media-caption">Arachnophobia, fear of spiders </div>
+      </div> 
+
+      <div class="text-section">
+        <p>We started by identifying fear types that translate well into VR. We dove deep into each scenario, trying to understand what specific implementations will enhance its fearful impact.</p>
+      </div>
+
+      <div class="main-image">
+        <video src="fear/fear_height.mp4"  muted loop playsinline onmouseenter="this.play()" onmouseleave="this.pause(); this.currentTime = 0;"></video>
+        <div class="media-caption">Fear of heights. </div>
+      </div> 
+
+      <div class="text-section">
+        <p>Each scene was fine-tuned through multiple pilot sessions, focusing on finding the right pace, avoid immersion breakers, and ensure comfort.</p>
+      </div>
+
+      <div class="main-image">
+        <video src="fear/fear_water.mp4"  muted loop playsinline onmouseenter="this.play()" onmouseleave="this.pause(); this.currentTime = 0;"></video>
+        <div class="media-caption">Fear of drowning. </div>
+      </div> 
+
+      <div class="text-section">
+        <p>The whole experience was designed for VR first-timers, ensuring natural locomotion on a 2x2m room and a single-button controller interface.</p>
+      </div>
+
+      <div class="main-image">
+        <video src="fear/fear_darkness.mp4"  muted loop playsinline onmouseenter="this.play()" onmouseleave="this.pause(); this.currentTime = 0;"></video>
+        <div class="media-caption">Fear of darkness. </div>
+      </div> 
+
 
       <div class="wish-list">
-        <h3>I wish I had more time for</h3>
+        <h3>Delivery Included</h3>
         <ul>
-          <li>Huge mode: Hide UI, enlarge hemoglobin to building size, explore in solitude.</li>
-          <li>Responsive UI: Adapts to hemoglobin scale.</li>
-          <li>Toolbox: Magnifying glass and painting brush for new question types.</li>
-          <li>Custom layouts: Unique text design per question.</li>
+          <li>Custom Operator UI (PC): To trigger, monitor, and switch between scenarios.</li>
+          <li>In-VR Fear Rating Interface: Simple interaction for self-reporting intensity.</li>
+          <li>Calm Down Environment: A decompression scene to help participants recover after each session.</li>
         </ul>
       </div>
     </main>
+
+    <div class="back-section">
+      <a href="index.html" class="back-button">← Back to Portfolio</a>
+    </div>
+
+    <div class="inquiries">
+      <span>Inquiries:</span>
+      <a class="email-pill" href="mailto:tal.zipori@gmail.com">tal.zipori@gmail.com</a>
+    </div>
   </div>
 </body>
 </html>
-

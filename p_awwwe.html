@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>A Personal Fear Signature - Tal Manuel Zipori</title>
+  <title>Awwwe - Tal Manuel Zipori</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -222,6 +222,41 @@
         position: absolute;
       }
     }
+
+    .back-section {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .back-button {
+      font-size: 0.9rem;
+      margin-top: 10px;
+      margin-bottom: 35px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .inquiries {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .email-pill {
+      border: 1px solid #e5e7eb;
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 6px 10px;
+      color: #374151;
+      font-size: 0.85rem;
+    }
   </style>
 </head>
 <body>
@@ -229,68 +264,59 @@
   
   <div class="container">
     <header class="project-header">
-      <h1 class="project-title">A Personal Fear Signature</h1>
+      <h1 class="project-title">Awwwe</h1>
       
       <div class="main-image">
-        <video src="videos/fear.mp4" controls loop playsinline></video>
-        <div class="media-caption">Showreel</div>
+        <video src="awwwe/awwwe_trailer.MP4" controls loop playsinline></video>
+        <div class="media-caption">Teaser - Sound ON</div>
       </div>
       
-      <p class="project-description">Five mini-experiences, each introduces a unique fear trigger—a two-years study with dozens of participants, designed to examine the way fear manifests in each of us.</p>
+      <p class="project-description">An audio-visual VR journey through surreal environments composed of collaged 3D scans. Blends tailor made spatial audio and creative movement mechanics to invite slow exploration and reflection.</p>
       
       <div class="project-meta">
-        <span class="client">Client: Ramot Lab, Weizmann Institute of Science</span>
-        <span class="project-type">Science</span>
+        <span class="client">Personal Project</span>
+        <span class="project-type">Gaming | Art</span>
       </div>
     </header>
     
     <main>
+      <div class="main-image">
+        <video src="awwwe/awwwe_budhha.mp4" muted loop playsinline onmouseenter="this.play()" onmouseleave="this.pause(); this.currentTime = 0;"></video>
+      </div>
+    
+      
       <div class="text-section">
-        <p>We were requested to trigger sustained fear responses without jump scares, allowing scientists to analyze emotional and physiological reactions in a controlled, immersive setting.</p>
+        <p>Awwwe is my way to examine ideas I find interesting in VR:</p>
+        <p>how to make movement feel like going for a walk on a 2x2m area?<br>
+        how to incorporate hand tracking and room boundaries as active game mechanics?<br>
+        how to use different body postures as a story-telling vehicle?</p>
       </div>
 
       <div class="main-image">
-        <video src="fear/fear_spiders.mp4" muted loop playsinline onmouseenter="this.play()" onmouseleave="this.pause(); this.currentTime = 0;"></video>
-        <div class="media-caption">Arachnophobia, fear of spiders </div>
-      </div> 
-
+        <video src="awwwe/awwwe_rocks.mp4" muted loop playsinline onmouseenter="this.play()" onmouseleave="this.pause(); this.currentTime = 0;"></video>
+      </div>
       <div class="text-section">
-        <p>We started by identifying fear types that translate well into VR. We dove deep into each scenario, trying to understand what specific implementations will enhance its fearful impact.</p>
+        <p>We research how sound can guide and adapt to player movement, developing methods to keep it smooth and continuous as actions, behaviors, or locations change.</p>
       </div>
-
+      
       <div class="main-image">
-        <video src="fear/fear_height.mp4"  muted loop playsinline onmouseenter="this.play()" onmouseleave="this.pause(); this.currentTime = 0;"></video>
-        <div class="media-caption">Fear of heights. </div>
-      </div> 
-
-      <div class="text-section">
-        <p>Each scene was fine-tuned through multiple pilot sessions, focusing on finding the right pace, avoid immersion breakers, and ensure comfort.</p>
+        <video src="awwwe/awwwe_handtojoker.mp4" muted loop playsinline onmouseenter="this.play()" onmouseleave="this.pause(); this.currentTime = 0;"></video>
       </div>
 
-      <div class="main-image">
-        <video src="fear/fear_water.mp4"  muted loop playsinline onmouseenter="this.play()" onmouseleave="this.pause(); this.currentTime = 0;"></video>
-        <div class="media-caption">Fear of drowning. </div>
-      </div> 
-
-      <div class="text-section">
-        <p>The whole experience was designed for VR first-timers, ensuring natural locomotion on a 2x2m room and a single-button controller interface.</p>
+   <div class="text-section">
+        <p>Designed for Meta Store and museum exhibition: two versions of the experience—an hour-long home-friendly edition, and a 15-minute version with extra touches for a dedicated physical space.</p>
       </div>
 
-      <div class="main-image">
-        <video src="fear/fear_darkness.mp4"  muted loop playsinline onmouseenter="this.play()" onmouseleave="this.pause(); this.currentTime = 0;"></video>
-        <div class="media-caption">Fear of darkness. </div>
-      </div> 
-
-
-      <div class="wish-list">
-        <h3>Delivery Included</h3>
-        <ul>
-          <li>Custom Operator UI (PC): To trigger, monitor, and switch between scenarios.</li>
-          <li>In-VR Fear Rating Interface: Simple interaction for self-reporting intensity.</li>
-          <li>Calm Down Environment: A decompression scene to help participants recover after each session.</li>
-        </ul>
-      </div>
     </main>
+
+    <div class="back-section">
+      <a href="index.html" class="back-button">← Back to Portfolio</a>
+    </div>
+
+    <div class="inquiries">
+      <span>Inquiries:</span>
+      <a class="email-pill" href="mailto:tal.zipori@gmail.com">tal.zipori@gmail.com</a>
+    </div>
   </div>
 </body>
 </html>
