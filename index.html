@@ -256,17 +256,6 @@
       </div>
     </div>
 
-
-    <div class="project" data-project="future-videos">
-      <div class="project-header">
-        <h3 class="project-title">Future of Videos?</h3>
-        <span class="project-arrow">↗</span>
-      </div>
-      <div class="media">
-        <video src="videos/videos.mp4" muted loop playsinline></video>
-      </div>
-    </div>
-
     <div class="project" data-project="marker-map-interface">
       <div class="project-header">
         <h3 class="project-title">Marker Map Interface</h3>
@@ -288,6 +277,27 @@
     </div>
 
     
+    <div class="project" data-project="furniture">
+      <div class="project-header">
+        <h3 class="project-title">AR Furniture App</h3>
+        <span class="project-arrow">↗</span>
+      </div>
+      <div class="media">
+        <video src="videos/furniture.mp4" muted loop playsinline></video>
+      </div>
+    </div>
+    
+    <div class="project" data-project="future-videos">
+      <div class="project-header">
+        <h3 class="project-title">Future of Videos?</h3>
+        <span class="project-arrow">↗</span>
+      </div>
+      <div class="media">
+        <video src="videos/videos.mp4" muted loop playsinline></video>
+      </div>
+    </div>
+
+
   </main>
 
   <script>
@@ -343,6 +353,8 @@
           window.location.href = 'p_stickout.html';
         } else if (projectId === 'grabbing') {
           window.location.href = 'p_grabbing.html';
+        } else if(projectId === 'furniture') {
+          window.location.href = 'p_furniture.html';
         } else {
           // Default fallback for other projects
           window.location.href = `project.html?project=${projectId}`;
