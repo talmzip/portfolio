@@ -245,6 +245,26 @@
         <video src="videos/videos.mp4" muted loop playsinline></video>
       </div>
     </div>
+
+    <div class="project" data-project="marker-map-interface">
+      <div class="project-header">
+        <h3 class="project-title">Marker Map Interface</h3>
+        <span class="project-arrow">↗</span>
+      </div>
+      <div class="media">
+        <video src="videos/marker-map-short.mp4" muted loop playsinline></video>
+      </div>
+    </div>
+
+    <div class="project" data-project="neuroanatomy-class">
+      <div class="project-header">
+        <h3 class="project-title">Neuroanatomy Class</h3>
+        <span class="project-arrow">↗</span>
+      </div>
+      <div class="media">
+        <video src="videos/brain.mp4" muted loop playsinline></video>
+      </div>
+    </div>
   </main>
 
   <script>
@@ -292,6 +312,10 @@
           window.location.href = 'p_awwwe.html';
         } else if (projectId === 'clone') {
           window.location.href = 'p_clone.html';
+        } else if (projectId === 'marker-map-interface') {
+          window.location.href = 'p_marker-map.html';
+        } else if (projectId === 'neuroanatomy-class') {
+          window.location.href = 'p_brain.html';
         } else {
           // Default fallback for other projects
           window.location.href = `project.html?project=${projectId}`;
