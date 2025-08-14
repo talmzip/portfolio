@@ -210,8 +210,8 @@
         padding: 100px 16px 32px; 
         position: relative;
       }
-      .project-title { font-size: 2rem; }
-      .project-description { font-size: 1.4rem; }
+      .project-title { font-size: 1.75rem; } /* 2.5rem * 0.7 = 1.75rem */
+      .project-description { font-size: 1.26rem; } /* 1.8rem * 0.7 = 1.26rem */
       .two-column-media, .two-column-images { 
         grid-template-columns: 1fr; 
         gap: 24px; 
@@ -220,6 +220,38 @@
         top: 16px; 
         left: 16px; 
         position: absolute;
+      }
+      
+      /* Reduce all text sizes by 15% on mobile */
+      .text-section p { font-size: 1.19rem; } /* 1.4rem * 0.85 = 1.19rem */
+      .media-caption { font-size: 0.765rem; } /* 0.9rem * 0.85 = 0.765rem */
+      .wish-list h3 { font-size: 1.02rem; } /* 1.2rem * 0.85 = 1.02rem */
+      .wish-list li { font-size: 0.935rem; } /* 1.1rem * 0.85 = 0.935rem */
+      
+      /* Reduce project meta text by 60% and ensure 2-column layout */
+      .project-meta {
+        font-size: 1rem; /* 1.3rem * 0.4 = 0.52rem */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      
+      .client {
+        font-size: 1rem; /* 1.3rem * 0.4 = 0.52rem */
+        flex: 1;
+        min-width: 0;
+        word-wrap: break-word;
+        text-align: left;
+      }
+      
+      .project-type {
+        font-size: 1rem; /* 1.3rem * 0.4 = 0.52rem */
+        flex: 1;
+        min-width: 0;
+        word-wrap: break-word;
+        text-align: right;
       }
     }
   </style>
