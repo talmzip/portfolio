@@ -226,6 +226,16 @@
       </div>
     </div>
 
+    <div class="project" data-project="stickout">
+      <div class="project-header">
+        <h3 class="project-title">Hand-Tracking Loss, A Game</h3>
+        <span class="project-arrow">↗</span>
+      </div>
+      <div class="media">
+        <video src="videos/stickout.mp4" muted loop playsinline></video>
+      </div>
+    </div>
+
     <div class="project" data-project="printing">
       <div class="project-header">
         <h3 class="project-title">Origins of Printing</h3>
@@ -265,6 +275,8 @@
         <video src="videos/brain.mp4" muted loop playsinline></video>
       </div>
     </div>
+
+
   </main>
 
   <script>
@@ -316,6 +328,8 @@
           window.location.href = 'p_marker-map.html';
         } else if (projectId === 'neuroanatomy-class') {
           window.location.href = 'p_brain.html';
+        } else if (projectId === 'stickout') {
+          window.location.href = 'p_stickout.html';
         } else {
           // Default fallback for other projects
           window.location.href = `project.html?project=${projectId}`;
