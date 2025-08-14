@@ -297,6 +297,16 @@
       </div>
     </div>
 
+    <div class="project" data-project="hammer-length">
+      <div class="project-header">
+        <h3 class="project-title">Hammer Length Mechanics</h3>
+        <span class="project-arrow">↗</span>
+      </div>
+      <div class="media">
+        <video src="videos/hammer.mp4" muted loop playsinline></video>
+      </div>
+    </div>
+
 
   </main>
 
@@ -355,6 +365,8 @@
           window.location.href = 'p_grabbing.html';
         } else if(projectId === 'furniture') {
           window.location.href = 'p_furniture.html';
+        } else if(projectId === 'hammer-length') {
+          window.location.href = 'p_hammer.html';
         } else {
           // Default fallback for other projects
           window.location.href = `project.html?project=${projectId}`;
