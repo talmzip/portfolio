@@ -56,6 +56,22 @@
         height: 160px;
         margin-bottom: 24px;
       }
+      
+      /* Mobile-specific reordering */
+      .two-col {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .two-col img {
+        order: 1; /* Move image to top, right after title */
+        margin-bottom: 24px;
+        align-self: left;
+      }
+      
+      .two-col > div:first-child {
+        order: 2; /* Move bullet list below image */
+      }
     }
 
     .pill-list {
