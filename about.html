@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Tal Manuel Zipori</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --text: #1f2937;
+      --muted: #4b5563;
+      --bg: hsl(0, 0%, 100%);
+      --container: 900px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: #2563eb; text-decoration: none; }
+
+    .about-text a {
+      color: var(--text);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .container {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+
+    h1 {
+      margin: 0 0 32px;
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 260px;
+      gap: 40px;
+    }
+    @media (max-width: 768px) {
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+      .two-col img {
+        width: 160px;
+        height: 160px;
+        margin-bottom: 24px;
+      }
+    }
+
+    .pill-list {
+      padding-left: 0;
+      list-style: none;
+      margin: 0 0 32px;
+    }
+    .pill-list li {
+      margin-bottom: 18px;
+    }
+    .pill-list span {
+      display: block;
+      font-weight: 600;
+    }
+    .pill-list p {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .about-text p {
+      margin: 18px 0;
+    }
+
+    .external-links {
+      margin-top: 32px;
+      display: grid;
+      gap: 10px;
+      padding-left: 20px;
+    }
+    .external-links a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .tauxr-section {
+      margin-top: 16px;
+      margin-bottom: 24px;
+      padding: 24px;
+      background: var(--bg);
+      border-radius: var(--card-radius);
+      border: 1px solid #e5e7eb;
+    }
+
+    .tauxr-section h2 {
+      margin: 0 0 16px;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .tauxr-section p {
+      margin: 12px 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .tauxr-achievements {
+      margin: 20px 0;
+      padding-left: 20px;
+    }
+
+    .tauxr-achievements li {
+      margin-bottom: 6px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .video-container {
+      margin-top: 24px;
+    }
+
+    .back-section {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .back-button {
+      font-size: 0.9rem;
+      margin-top: 10px;
+      margin-bottom: 35px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .inquiries {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .email-pill {
+      border: 1px solid #e5e7eb;
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 6px 10px;
+      color: #374151;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>About</h1>
+    <div class="two-col">
+      <div>
+        <ul class="pill-list">
+          <li>
+            <span>Guiding the process end-to-end</span>
+            <p>Concept → Design → Prototyping → Production → Deployment → Analysis.</p>
+          </li>
+          <li>
+            <span>Adaptive, milestones-based roadmap</span>
+            <p>Able to change on the flight, attentive to client needs.</p>
+          </li>
+          <li>
+            <span>Clear and transparent collaboration</span>
+            <p>Providing clients with an easy way to immediate check up on project status.</p>
+          </li>
+        </ul>
+      </div>
+      <img src="about/about_pic.jpg" alt="Portrait" style="width:200px;height:200px;border-radius:8px;object-fit:cover;" />
+    </div>
+
+    <div class="about-text">
+      <p>XR Engineer, UX Designer & Product Manager, with 12+ years of hands-on experience across varied disciplines: training & simulations, tech startups, and research & education.</p>
+      <p>Former Studio Director at <a href="#" id="tauxr-para-link">TAUXR Studio</a>, where I led the creation of 30+ scientific experiments deployed to thousands of participants across disciplines including neuroscience, biology, psychology, mechanical engineering, and sports. Previously, I co-founded <a href="#" id="clone-para-link">Clone</a>, a remote presence platform that virtually teleports architects and engineers to job sites. In 2013, I built <a href="#" id="virt-para-link">Virt</a> — a 100 m² free-roaming VR simulator for training high-stakes tactical scenarios.</p>
+    </div>
+
+    <div id="tauxr-content" class="tauxr-section" style="display: none;">
+      <h2>TAUXR | XR For Academia</h2>
+      <p>I was hired by Prof. Tom Schonberg (Tel Aviv University) to make VR more accessible for the academia, and as demand grew we decided to expand into a full studio.</p>
+      <p>TAUXR is a production and design studio that provides XR services to academic researchers and educators. We design, code, and operate experiments, simulations and classes, tailored for our clients need.</p>
+      
+      <ul class="tauxr-achievements">
+        <li>Delivered 30+ projects deployed to over 2,000 participants in 3 years.</li>
+        <li>Managed the full client pipeline, from first meeting to final deployment.</li>
+        <li>Led design and oversight of all active projects.</li>
+        <li>Developed (code) the complex projects + built and maintained the core studio infrastructure that supported all of our work.</li>
+        <li>Recruited and led a team of 6 across art, development and product roles.</li>
+      </ul>
+
+    </div>
+
+    <div id="clone-content" class="tauxr-section" style="display: none;">
+      <h2>Clone | Next-Gen Remote Communication</h2>
+      <p>Clone is a remote communication platform I built with Asaf Amit & Yaniv Knoll.<br> More info in the <a href="clone.html">project page</a>.</p>
+      
+      <ul class="tauxr-achievements">
+        <li>Raised $1M (pre-seed) from private investors and construction experts.</li>
+        <li>Piloted alpha & beta products on site with >10 companies in Israel, US & Japan (3 companies in the top 20 US construction market).</li>
+        <li>Product concepts, characterization and ongoing feedback implementations & gather from clients.</li>
+        <li>Launched a Seed fundraising round, met >50 top tier VC partners in Israel and SF. Didn't manage to secure the round, but this was one of my top learning experiences on startups.</li>
+      </ul>
+
+    </div>
+
+    <div id="virt-content" class="tauxr-section" style="display: none;">
+      <h2>Virt | Virtual Training Platform</h2>
+      <p>Virt was a VR training platform for armies and security companies.</p>
+      
+      <ul class="tauxr-achievements">
+        <li>Full product ownership: characterization, feedback implementations and feature prioritization.</li>
+        <li>Recruited and managed a team of 5 software developers.</li>
+        <li>Built and designed VR training scenarios on a 100m area using real physical items as props that had virtual representation in the VR world.</li>
+      </ul>
+
+    </div>
+
+    <div class="back-section">
+      <a href="index.html" class="back-button">← Back to Portfolio</a>
+    </div>
+
+    <div class="inquiries">
+      <span>Inquiries:</span>
+      <a class="email-pill" href="mailto:tal.zipori@gmail.com">tal.zipori@gmail.com</a>
+    </div>
+  </div>
+
+  <script>
+    // Function to close all toggles
+    function closeAllToggles() {
+      const toggles = ['tauxr-content', 'clone-content', 'virt-content'];
+      toggles.forEach(id => {
+        document.getElementById(id).style.display = 'none';
+      });
+    }
+
+    document.getElementById('tauxr-para-link').addEventListener('click', function(e) {
+      e.preventDefault();
+      const content = document.getElementById('tauxr-content');
+      if (content.style.display === 'none') {
+        closeAllToggles();
+        content.style.display = 'block';
+      } else {
+        content.style.display = 'none';
+      }
+    });
+    document.getElementById('clone-para-link').addEventListener('click', function(e) {
+      e.preventDefault();
+      const content = document.getElementById('clone-content');
+      if (content.style.display === 'none') {
+        closeAllToggles();
+        content.style.display = 'block';
+      } else {
+        content.style.display = 'none';
+      }
+    });
+    document.getElementById('virt-para-link').addEventListener('click', function(e) {
+      e.preventDefault();
+      const content = document.getElementById('virt-content');
+      if (content.style.display === 'none') {
+        closeAllToggles();
+        content.style.display = 'block';
+      } else {
+        content.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
