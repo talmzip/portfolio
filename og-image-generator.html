@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OG Image Generator</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .og-card {
+            width: 1200px;
+            height: 630px;
+            background: white;
+            border-radius: 20px;
+            padding: 60px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .og-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+        }
+        .name {
+            font-size: 64px;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+        .title {
+            font-size: 36px;
+            color: #4b5563;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+        .description {
+            font-size: 24px;
+            color: #6b7280;
+            line-height: 1.4;
+            max-width: 800px;
+        }
+        .logo {
+            position: absolute;
+            bottom: 60px;
+            right: 60px;
+            font-size: 18px;
+            color: #9ca3af;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="og-card">
+        <div class="name">Tal Manuel Zipori</div>
+        <div class="title">XR Engineer • UX Designer • Product Manager</div>
+        <div class="description">12+ years experience in Virtual Reality, Augmented Reality, and user experience design. Led TAUXR Studio, co-founded Clone XR startup, created Virt VR training platform.</div>
+        <div class="logo">tmzip.com</div>
+    </div>
+    
+    <script>
+        // Instructions for generating the OG image:
+        // 1. Open this file in a browser
+        // 2. Take a screenshot at 1200x630 pixels
+        // 3. Save as og-image.jpg in your images folder
+        // 4. Update the meta tags in your HTML files to point to this image
+        
+        console.log('OG Image Generator Instructions:');
+        console.log('1. Take a screenshot of this page at 1200x630 pixels');
+        console.log('2. Save as og-image.jpg in your images folder');
+        console.log('3. The image will be used for social media sharing');
+    </script>
+</body>
+</html>

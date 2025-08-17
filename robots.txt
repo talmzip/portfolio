@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://tmzip.com/sitemap.xml
+
+# Disallow any admin or private areas (if they exist in the future)
+# Disallow: /admin/
+# Disallow: /private/

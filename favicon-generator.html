@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favicon Generator</title>
+    <style>
+        body {
+            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .favicon-preview {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+            align-items: center;
+        }
+        .favicon-size {
+            text-align: center;
+        }
+        .favicon-size img {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .instructions {
+            background: #f3f4f6;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .download-section {
+            background: #dbeafe;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Favicon Generator for Portfolio Site</h1>
+    
+    <div class="instructions">
+        <h3>📋 Instructions:</h3>
+        <ol>
+            <li>Your profile picture (<code>images/hand.jpg</code>) will now be used for:</li>
+            <ul>
+                <li>✅ Social media sharing (Facebook, LinkedIn, Twitter)</li>
+                <li>✅ Browser favicon (tab icon)</li>
+                <li>✅ Structured data (search engine rich snippets)</li>
+            </ul>
+            <li>For best results, ensure your <code>hand.jpg</code> is:</li>
+            <ul>
+                <li>Square aspect ratio (1:1)</li>
+                <li>At least 400x400 pixels</li>
+                <li>High quality and professional looking</li>
+            </ul>
+        </ol>
+    </div>
+
+    <div class="favicon-preview">
+        <div class="favicon-size">
+            <h4>16x16 (Favicon)</h4>
+            <img src="images/hand.jpg" alt="16x16 favicon" width="16" height="16">
+        </div>
+        <div class="favicon-size">
+            <h4>32x32 (Standard)</h4>
+            <img src="images/hand.jpg" alt="32x32 favicon" width="32" height="32">
+        </div>
+        <div class="favicon-size">
+            <h4>48x48 (Large)</h4>
+            <img src="images/hand.jpg" alt="48x48 favicon" width="48" height="48">
+        </div>
+        <div class="favicon-size">
+            <h4>400x400 (Social)</h4>
+            <img src="images/hand.jpg" alt="400x400 social" width="100" height="100">
+        </div>
+    </div>
+
+    <div class="download-section">
+        <h3>🎯 What's Now Set Up:</h3>
+        <ul>
+            <li><strong>Social Media Sharing:</strong> Your profile picture will appear when links are shared on Facebook, LinkedIn, Twitter, WhatsApp, etc.</li>
+            <li><strong>Browser Favicon:</strong> Your profile picture will appear in browser tabs</li>
+            <li><strong>Search Results:</strong> Your profile picture may appear in Google search results as rich snippets</li>
+            <li><strong>Consistent Branding:</strong> Same image across all platforms and contexts</li>
+        </ul>
+    </div>
+
+    <h3>🔧 Technical Details:</h3>
+    <p>I've updated your HTML files to use <code>images/hand.jpg</code> for:</p>
+    <ul>
+        <li><code>og:image</code> - Open Graph (Facebook, LinkedIn)</li>
+        <li><code>twitter:image</code> - Twitter Cards</li>
+        <li><code>rel="icon"</code> - Browser favicon</li>
+        <li><code>schema:image</code> - Structured data</li>
+    </ul>
+
+    <h3>📱 Testing Your Setup:</h3>
+    <ul>
+        <li><strong>Facebook/LinkedIn:</strong> <a href="https://developers.facebook.com/tools/debug/" target="_blank">Facebook Debugger</a></li>
+        <li><strong>Twitter:</strong> <a href="https://cards-dev.twitter.com/validator" target="_blank">Twitter Card Validator</a></li>
+        <li><strong>General:</strong> <a href="https://metatags.io/" target="_blank">Meta Tags Tester</a></li>
+    </ul>
+
+    <script>
+        // Check if the image loads correctly
+        const img = new Image();
+        img.onload = function() {
+            console.log('✅ Profile image loaded successfully');
+            console.log('Dimensions:', this.width, 'x', this.height);
+            console.log('Aspect ratio:', (this.width / this.height).toFixed(2));
+        };
+        img.onerror = function() {
+            console.error('❌ Profile image failed to load');
+        };
+        img.src = 'images/hand.jpg';
+    </script>
+</body>
+</html>
