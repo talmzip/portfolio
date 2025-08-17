@@ -51,11 +51,6 @@
       .two-col {
         grid-template-columns: 1fr;
       }
-      .two-col img {
-        width: 160px;
-        height: 160px;
-        margin-bottom: 24px;
-      }
       
       /* Mobile-specific reordering */
       .two-col {
@@ -63,15 +58,17 @@
         flex-direction: column;
       }
       
-      .two-col img {
-        order: 1; /* Move image to top, right after title */
-        margin-bottom: 24px;
-        align-self: left;
+      .desktop-only {
+        display: none !important;
       }
       
       .two-col > div:first-child {
         order: 2; /* Move bullet list below image */
       }
+    }
+    
+    .desktop-only {
+      display: block;
     }
 
     .pill-list {
@@ -204,7 +201,7 @@
           </li>
         </ul>
       </div>
-      <img src="about/about_pic.jpg" alt="Portrait" style="width:200px;height:200px;border-radius:8px;object-fit:cover;" />
+      <img src="about/about_pic.jpg" alt="Portrait" style="width:200px;height:200px;border-radius:8px;object-fit:cover;" class="desktop-only" />
     </div>
 
     <div class="about-text">
